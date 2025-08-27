@@ -1,0 +1,6 @@
+*.vvp
+*.vcd
+
+*.gtkw
+
+.DS_Store
