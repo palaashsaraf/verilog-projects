@@ -1,22 +1,24 @@
 # Verilog Projects
 
-A collection of digital design modules written in **Verilog HDL**.  
+A collection of digital design modules written in **Verilog HDL**.
 Each project includes its source, testbench, and simulation output.
 
 ---
 
 ## 📂 Projects
 
-- `full_adder/` – 1-bit full adder with carry in/out  
-- `mux_2to1/` – 2:1 multiplexer  
+- `full_adder/` – 1-bit full adder with carry in/out 
+- `mux_2to1/` – 2:1 multiplexer
+- `mux_4to1/` - 4:1 multiplexer
+- `demux_1to2/` - 1:2 demultiplexer
 
 ---
 
 ## ▶️ Usage
 
 **Requirements**  
-- [Icarus Verilog](http://iverilog.icarus.com/) (`iverilog`, `vvp`)  
-- [GTKWave](http://gtkwave.sourceforge.net/) (waveform viewer)  
+- [Icarus Verilog](http://iverilog.icarus.com/) (`iverilog`, `vvp`)
+- [GTKWave](http://gtkwave.sourceforge.net/) (waveform viewer)
 
 ```bash
 # compile and simulate manually
