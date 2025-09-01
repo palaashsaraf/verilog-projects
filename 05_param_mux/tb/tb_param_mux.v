@@ -2,15 +2,16 @@
 
 module tb_param_mux;
 
-	parameter N = 8;
+	parameter IP_WIDTH = 8;
+	localparam OP_WIDTH = $clog2(N);
 
-	reg [N-1:0] i;
-	reg [$clog2(N)-1:0] s;
+	reg [IP_WIDTH-1:0] i;
+	reg [OP_WIDTH-1:0] s;
 	wire y;
 	integer d, sel;
 
 	param_mux # (
-		.N(N)
+		.IP_WIDTH(IP_WIDTH)
 	) dut (
 		.i(i),
 		.s(s),
@@ -19,12 +20,12 @@ module tb_param_mux;
 
 	initial begin
 		$dumpfile("sim/param_mux.vcd");
-		$dumpvars(0, tb_param_mux);
+		$dumpvars(0);
 
-		for (d = 0; d < (1 << N); d = d + 1) begin
-			i = d[N-1:0];
-			for (sel = 0; sel < N; sel = sel + 1) begin
-				s = sel[$clog2(N)-1:0];
+		for (d = 0; d < (1 << IP_WIDTH); d = d + 1) begin
+			i = d[IP_WIDTH-1:0];
+			for (sel = 0; sel < IP_WIDTH; sel = sel + 1) begin
+				s = sel[OP_WIDTH-1:0];
 
 				#10;
 			end

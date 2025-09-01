@@ -3,7 +3,7 @@ compile:
 	vvp sim/demux_1to2.vvp
 
 plot:
-	gtkwave sim/demux_1to2.vcd
+	gtkwave sim/demux_1to2.vcd &
 
 clean:
 	rm -f sim/demux_1to2.vvp sim/demux_1to2.vcd

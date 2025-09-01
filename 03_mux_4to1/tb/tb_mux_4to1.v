@@ -19,7 +19,7 @@ module tb_mux_4to1;
 
 	initial begin
 		$dumpfile("sim/mux_4to1.vcd");
-		$dumpvars(0, tb_mux_4to1);
+		$dumpvars(0);
 		
 		for (d = 0; d < 16; d = d + 1) begin
 			{i3, i2, i1, i0} = d[3:0];

@@ -11,7 +11,8 @@ Each project includes its source, testbench, and simulation output.
 - `02_mux_2to1/` – 2:1 multiplexer
 - `03_mux_4to1/` - 4:1 multiplexer
 - `04_demux_1to2/` - 1:2 demultiplexer
-- `05_param_mux/` - parametric N:1 multiplexer
+- `05_param_mux/` - parametric N-bit multiplexer
+- `06_pri_encoder/` - parametric N-bit priority encoder
 
 ---
 

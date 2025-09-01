@@ -3,7 +3,7 @@ compile:
 	vvp sim/mux_4to1.vvp
 
 plot:
-	gtkwave sim/mux_4to1.vcd
+	gtkwave sim/mux_4to1.vcd &
 
 clean:
 	rm -f sim/mux_4to1.vvp sim/mux_4to1.vcd

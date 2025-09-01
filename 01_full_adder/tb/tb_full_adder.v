@@ -15,7 +15,7 @@ module tb_full_adder;
 
 	initial begin
 		$dumpfile("sim/full_adder.vcd");
-		$dumpvars(0, tb_full_adder);
+		$dumpvars(0);
 		
 		a = 0; b = 0; c_in = 0; #10
 		a = 1; b = 0; c_in = 0; #10

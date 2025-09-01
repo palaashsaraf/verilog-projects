@@ -14,7 +14,7 @@ module tb_mux_2to1;
 
 	initial begin
 		$dumpfile("sim/mux_2to1.vcd");
-		$dumpvars(0, tb_mux_2to1);
+		$dumpvars(0);
 
 		i0 = 0; i1 = 0; sel = 0; #10
 		i0 = 0; i1 = 0; sel = 1; #10

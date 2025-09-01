@@ -14,7 +14,7 @@ module tb_demux_1to2;
 
 	initial begin
 		$dumpfile("sim/demux_1to2.vcd");
-		$dumpvars(0, tb_demux_1to2);
+		$dumpvars(0);
 
 		i = 0; sel = 0; #10
 		i = 1; sel = 0; #10

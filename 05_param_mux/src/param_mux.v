@@ -1,15 +1,15 @@
 module param_mux # (
-	parameter N = 2
+	parameter IP_WIDTH = 2
 ) (
-	input wire [N-1:0] i,
-	input wire [$clog2(N)-1:0] s,
+	input wire [IP_WIDTH-1:0] i,
+	input wire [$clog2(IP_WIDTH)-1:0] s,
 	output reg y
 );
 	integer j;
 
 	always @(*) begin
 		y = 1'b0;
-		for (j = 0; j < N; j = j + 1) begin
+		for (j = 0; j < IP_WIDTH; j = j + 1) begin
 			if (s == j)
 				y = i[j];
 		end

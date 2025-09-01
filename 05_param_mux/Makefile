@@ -3,7 +3,7 @@ compile:
 	vvp sim/param_mux.vvp
 
 plot:
-	gtkwave sim/param_mux.vcd
+	gtkwave sim/param_mux.vcd &
 
 clean:
 	rm -f sim/param_mux.vvp sim/param_mux.vcd

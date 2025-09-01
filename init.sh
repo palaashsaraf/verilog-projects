@@ -25,7 +25,7 @@ module tb_$NAME;
 
 	initial begin
 		\$dumpfile("sim/$NAME.vcd");
-		\$dumpvars(0, tb_$NAME);
+		\$dumpvars(0);
 
 
 
@@ -41,14 +41,12 @@ tb/tb_$NAME.v
 EOF
 
 cat > Makefile <<EOF
-NAME=$NAME
-
 compile:
 	iverilog -o sim/$NAME.vvp -f filelist.f
 	vvp sim/$NAME.vvp
 
 plot:
-	gtkwave sim/$NAME.vcd
+	gtkwave sim/$NAME.vcd &
 
 clean:
 	rm -f sim/$NAME.vvp sim/$NAME.vcd
