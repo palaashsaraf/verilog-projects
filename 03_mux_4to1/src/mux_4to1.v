@@ -1,5 +1,3 @@
-`timescale 1ns/1ps
-
 module mux_4to1 (
 	input wire i0,
 	input wire i1,

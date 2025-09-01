@@ -5,4 +5,7 @@ compile:
 plot:
 	gtkwave sim/param_mux.vcd
 
-.PHONY: compile plot
+clean:
+	rm -f sim/param_mux.vvp sim/param_mux.vcd
+
+.PHONY: compile plot clean

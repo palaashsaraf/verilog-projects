@@ -5,4 +5,7 @@ compile:
 plot:
 	gtkwave sim/demux_1to2.vcd
 
-.PHONY: compile plot
+clean:
+	rm -f sim/demux_1to2.vvp sim/demux_1to2.vcd
+
+.PHONY: compile plot clean

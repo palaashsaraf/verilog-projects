@@ -1,10 +1,8 @@
-`timescale 1ns/1ps
-
 module param_mux # (
 	parameter N = 2
 ) (
-	input wire [N - 1:0] i,
-	input wire [$clog2(N) - 1:0] s,
+	input wire [N-1:0] i,
+	input wire [$clog2(N)-1:0] s,
 	output reg y
 );
 	integer j;

@@ -1,5 +1,3 @@
-`timescale 1ns/1ps
-
 module demux_1to2 (
 	input wire i,
 	input wire sel,
