@@ -1,16 +1,16 @@
 `timescale 1ns/1ps
 
-module tb_pri_encoder;
+module tb_decoder;
 
 	parameter IP_WIDTH = 4;
-	localparam OP_WIDTH = $clog2(IP_WIDTH);
+	localparam OP_WIDTH = (1 << IP_WIDTH);
 
 	reg en;
 	reg [IP_WIDTH-1:0] i;
 	wire [OP_WIDTH-1:0] y;
 	integer j;
 
-	pri_encoder # (
+	decoder # (
 		.IP_WIDTH(IP_WIDTH)
 	) dut (
 		.en(en),
@@ -19,7 +19,7 @@ module tb_pri_encoder;
 	);
 
 	initial begin
-		$dumpfile("sim/pri_encoder.vcd");
+		$dumpfile("sim/decoder.vcd");
 		$dumpvars(0);
 
 		i = {(IP_WIDTH){1'b0}};

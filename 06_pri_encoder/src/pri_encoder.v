@@ -1,11 +1,10 @@
 module pri_encoder # (
 	parameter IP_WIDTH = 2,
-	parameter OP_WIDTH = $clog2(IP_WIDTH)
-	
+	parameter OP_WIDTH = $clog2(IP_WIDTH)	
 ) (
-	input en,
+	input wire en,
 	input wire [IP_WIDTH-1:0] i,
-	output reg [OP_WIDTH-1:0] y
+	output reg [OP_WIDTH-1:0] y`
 );
 
 	integer j;
@@ -14,7 +13,6 @@ module pri_encoder # (
 		y = {(OP_WIDTH){1'b0}};
 
 		if (en) begin
-			y = {(OP_WIDTH){1'b0}};
 			for (j = 0; j < IP_WIDTH; j = j + 1) begin
 				if (i[j])
 					y = j;
