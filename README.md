@@ -13,6 +13,7 @@ Each project includes its source, testbench, and simulation output.
 - `04_demux_1to2/` - 1:2 demultiplexer
 - `05_param_mux/` - parametric N-bit multiplexer
 - `06_pri_encoder/` - parametric N-bit priority encoder
+- `07_decoder/` - parametric N-bit decoder
 
 ---
 
