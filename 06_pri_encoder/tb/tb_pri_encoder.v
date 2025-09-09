@@ -10,7 +10,7 @@ module tb_pri_encoder;
 	wire [OP_WIDTH-1:0] y;
 	integer j;
 
-	pri_encoder # (
+	pri_encoder #(
 		.IP_WIDTH(IP_WIDTH)
 	) dut (
 		.en(en),
@@ -22,7 +22,7 @@ module tb_pri_encoder;
 		$dumpfile("sim/pri_encoder.vcd");
 		$dumpvars(0);
 
-		i = {(IP_WIDTH){1'b0}};
+		i = {IP_WIDTH{1'b0}};
 
 		en = 0;
 		for (j = 0; j < (1 << IP_WIDTH); j = j + 1) begin

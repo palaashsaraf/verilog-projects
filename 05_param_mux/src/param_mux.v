@@ -1,4 +1,4 @@
-module param_mux # (
+module param_mux #(
 	parameter IP_WIDTH = 2
 ) (
 	input wire [IP_WIDTH-1:0] i,

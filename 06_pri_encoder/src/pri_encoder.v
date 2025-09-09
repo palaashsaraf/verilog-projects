@@ -1,4 +1,4 @@
-module pri_encoder # (
+module pri_encoder #(
 	parameter IP_WIDTH = 2,
 	parameter OP_WIDTH = $clog2(IP_WIDTH)	
 ) (
@@ -10,7 +10,7 @@ module pri_encoder # (
 	integer j;
 
 	always @(*) begin
-		y = {(OP_WIDTH){1'b0}};
+		y = {OP_WIDTH{1'b0}};
 
 		if (en) begin
 			for (j = 0; j < IP_WIDTH; j = j + 1) begin

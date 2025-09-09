@@ -10,7 +10,7 @@ module tb_decoder;
 	wire [OP_WIDTH-1:0] y;
 	integer j;
 
-	decoder # (
+	decoder #(
 		.IP_WIDTH(IP_WIDTH)
 	) dut (
 		.en(en),
@@ -22,7 +22,7 @@ module tb_decoder;
 		$dumpfile("sim/decoder.vcd");
 		$dumpvars(0);
 
-		i = {(IP_WIDTH){1'b0}};
+		i = {IP_WIDTH{1'b0}};
 
 		en = 0;
 		for (j = 0; j < (1 << IP_WIDTH); j = j + 1) begin

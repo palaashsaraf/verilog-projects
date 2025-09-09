@@ -1,4 +1,4 @@
-module decoder # (
+module decoder #(
 	parameter IP_WIDTH = 1,
 	parameter OP_WIDTH = (1 << IP_WIDTH)
 ) (
@@ -10,7 +10,7 @@ module decoder # (
 	integer j;
 
 	always @(*) begin
-		y = {(OP_WIDTH){1'b0}};
+		y = {OP_WIDTH{1'b0}};
 
 		if (en) begin
 			for (j = 0; j < OP_WIDTH; j = j + 1) begin

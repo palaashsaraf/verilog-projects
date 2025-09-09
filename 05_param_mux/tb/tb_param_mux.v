@@ -10,7 +10,7 @@ module tb_param_mux;
 	wire y;
 	integer d, sel;
 
-	param_mux # (
+	param_mux #(
 		.IP_WIDTH(IP_WIDTH)
 	) dut (
 		.i(i),
