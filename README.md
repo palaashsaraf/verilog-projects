@@ -14,6 +14,7 @@ Each project includes its source, testbench, and simulation output.
 - `05_param_mux/` - parametric N-bit multiplexer
 - `06_pri_encoder/` - parametric N-bit priority encoder
 - `07_decoder/` - parametric N-bit decoder
+- `08_comparator/` - parametric N-bit comparator with optional signed/unsigned support
 
 ---
 
@@ -27,8 +28,15 @@ Each project includes its source, testbench, and simulation output.
 # compile and simulate manually
 $ iverilog -o sim/<project>.vvp -f filelist.f
 $ vvp sim/<project>.vvp
+
+# view waveform
 $ gtkwave sim/<project>.vcd
+
+# clean generated files
+$ rm -f sim/<project>.vvp sim/<project>.vcd
 
 # or use the provided Makefile
 $ make compile
 $ make plot
+$ make clean
+
