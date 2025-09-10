@@ -15,6 +15,7 @@ Each project includes its source, testbench, and simulation output.
 - `06_pri_encoder/` - parametric N-bit priority encoder
 - `07_decoder/` - parametric N-bit decoder
 - `08_comparator/` - parametric N-bit comparator with optional signed/unsigned support
+- `09_rca/` - parametric N-bit ripple carry adder with carry in/out
 
 ---
 
